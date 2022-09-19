@@ -43,7 +43,7 @@ startup_checks()
 
     if [ $DISTRO_VERSION == "bionic" ]; then
 	ISOURL=http://cdimage.ubuntu.com/releases/18.04/release
-	ISO=ubuntu-18.04.1-server-arm64.iso
+	ISO=ubuntu-18.04.6-server-arm64.iso
     elif [ $DISTRO_VERSION == "cosmic" ]; then
 	ISOURL=http://cdimage.ubuntu.com/releases/18.10/release
 	ISO=ubuntu-18.10-server-arm64.iso
