@@ -1,7 +1,7 @@
 [submodule "src/grub"]
 	path = src/grub
-	url = https://github.com/aarch64-laptops/grub.git
-	branch = laptops
+	url = https://github.com/rhboot/grub2.git
+	branch = master
 [submodule "src/linux"]
 	path = src/linux
 	url = https://github.com/aarch64-laptops/linux.git
