@@ -94,6 +94,7 @@ install_prerequisites()
 	  sshpass                    \
 	  tar                        \
 	  wget                       \
+	  ubiquity                   \
 	  xz-utils
 }
 
