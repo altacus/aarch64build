@@ -167,7 +167,7 @@ start_ubuntu_installer()
     print_red " Press return and follow the prompts ...       "
     read
 
-    virt-install --accelerate --cdrom $ISODIR/$ISO --disk size=7,format=raw   \
+    virt-install --accelerate --cdrom $ISODIR/$ISO --disk size=12,format=raw   \
 		 --name $VMNAME --os-type linux --os-variant ubuntu18.04      \
 		 --ram 12048 --arch aarch64 --noreboot --cpuset=0,1,2
 
