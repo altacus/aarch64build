@@ -134,7 +134,7 @@ UUID=$(lsblk -o UUID /dev/sda2 | sed '/UUID/d')
 sed -i "s/\[REPLACE_UUID\]/$UUID/" $EFIBOOTDIR/grub.cfg
 
 print_green "Installing the Ubuntu Desktop"
-apt install -y ubuntu-desktop
+apt install -y ubuntu-desktop ubiquity
 
 print_green "Shutting down the VM"
 poweroff &
