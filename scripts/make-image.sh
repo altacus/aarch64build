@@ -102,7 +102,7 @@ install_prerequisites()
 upgrade_system()
 {
     export DEBIAN_FRONTEND=noninteractive
-    $SUDO apt-get -y upgrade
+    $SUDO apt-get -y dist-upgrade
 }
 
 check_for_qemu_updates()
@@ -167,7 +167,7 @@ start_ubuntu_installer()
 
     virt-install --accelerate --cdrom $ISODIR/$ISO --disk size=7,format=raw   \
 		 --name $VMNAME --os-type linux --os-variant ubuntu18.04      \
-		 --ram 2048 --arch aarch64 --noreboot # --vcpus=$(nproc)
+		 --ram 12048 --arch aarch64 --noreboot --cpuset=0,1,2
 
     if [ $MAKE_CLEAN_UBUNTU ]; then
 	print_red "Installing the desktop into the clean image [this will take a while]"
