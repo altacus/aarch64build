@@ -64,7 +64,7 @@ print_green "  We'll take it from here - go grab a coffee, this'll take a while!
 print_green "Updating sources.list"
 sudo sed -i 's/us.ports.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
 sudo sed -i 's/ubuntu-ports/ubuntu/g' /etc/apt/sources.list
-sudo -e '/security/s/^/#/g' -i /etc/apt/sources.list
+sudo sed -e '/security/s/^/#/g' -i /etc/apt/sources.list
 
 cat /etc/apt/sources.list
 
