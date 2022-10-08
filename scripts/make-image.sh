@@ -53,11 +53,14 @@ startup_checks()
     elif [ $DISTRO_VERSION == "eoan" ]; then
 	ISOURL=http://old-releases.ubuntu.com/releases/19.10
 	ISO=ubuntu-19.10-server-arm64.iso
-	
     else
 	print_red "Distro '$DISTRO_VERSION' not supported"
 	return 1
     fi
+    
+    print_red "Distro '$DISTRO_VERSION' supported"
+    print_red "Iso Url '$ISOURL' "
+    print_red "Iso '$ISO' "
 
 # Are we running in a supported container?
     if [ -d /isos ] && [ -d /output ] && [ -d /scripts ]; then
